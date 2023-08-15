@@ -3,11 +3,14 @@ import { useState } from 'react'
 import WindowsCalculatorButtonComponent from './CalculatorButton'
 
 export const Calculator = () => {
-   const [show, setShow] = useState('')
-   const [prod, setProd] = useState()
-   const [symbol, setSymbol] = useState('')
+   const [calculatorState, setCalculatorState] = useState({
+      show: '',
+      prod: '',
+      symbol: '',
+   })
 
-   const handleOnClickResult = () => {}
+   const { show, prod, symbol } = calculatorState
+
    return (
       <Box
          sx={{
@@ -26,7 +29,6 @@ export const Calculator = () => {
                gutterBottom
                sx={{
                   textAlign: 'right',
-
                   color: 'white',
                   opacity: '0.5',
                }}
@@ -50,229 +52,55 @@ export const Calculator = () => {
                   gap: 0.5,
                }}
             >
-               <Grid item>
-                  <WindowsCalculatorButtonComponent
-                     symbol={symbol}
-                     label={''}
-                     show={show}
-                     setShow={setShow}
-                     setSymbol={setSymbol}
-                     prod={prod}
-                     setProd={setProd}
-                  />
-               </Grid>
-               <Grid item>
-                  <WindowsCalculatorButtonComponent
-                     symbol={symbol}
-                     label={'C'}
-                     show={show}
-                     setShow={setShow}
-                     setSymbol={setSymbol}
-                     prod={prod}
-                     setProd={setProd}
-                  />
-               </Grid>
-               <Grid item>
-                  <WindowsCalculatorButtonComponent
-                     symbol={symbol}
-                     label={'%'}
-                     show={show}
-                     setShow={setShow}
-                     setSymbol={setSymbol}
-                     prod={prod}
-                     setProd={setProd}
-                  />
-               </Grid>
-               <Grid item>
-                  <WindowsCalculatorButtonComponent
-                     symbol={symbol}
-                     label={'<-'}
-                     show={show}
-                     setShow={setShow}
-                     isDelete={true}
-                     setSymbol={setSymbol}
-                     prod={prod}
-                     setProd={setProd}
-                  />
-               </Grid>
-               <Grid item>
-                  <WindowsCalculatorButtonComponent
-                     symbol={symbol}
-                     label={'7'}
-                     show={show}
-                     setShow={setShow}
-                     setSymbol={setSymbol}
-                     prod={prod}
-                     setProd={setProd}
-                  />
-               </Grid>
-               <Grid item>
-                  <WindowsCalculatorButtonComponent
-                     symbol={symbol}
-                     label={'8'}
-                     show={show}
-                     setShow={setShow}
-                     setSymbol={setSymbol}
-                     prod={prod}
-                     setProd={setProd}
-                  />
-               </Grid>
-               <Grid item>
-                  <WindowsCalculatorButtonComponent
-                     symbol={symbol}
-                     label={'9'}
-                     show={show}
-                     setShow={setShow}
-                     setSymbol={setSymbol}
-                     prod={prod}
-                     setProd={setProd}
-                  />
-               </Grid>
-               <Grid item>
-                  <WindowsCalculatorButtonComponent
-                     symbol={symbol}
-                     label={'/'}
-                     show={show}
-                     setShow={setShow}
-                     setSymbol={setSymbol}
-                     prod={prod}
-                     setProd={setProd}
-                  />
-               </Grid>
-               <Grid item>
-                  <WindowsCalculatorButtonComponent
-                     symbol={symbol}
-                     label={'4'}
-                     show={show}
-                     setShow={setShow}
-                     setSymbol={setSymbol}
-                     prod={prod}
-                     setProd={setProd}
-                  />
-               </Grid>
-               <Grid item>
-                  <WindowsCalculatorButtonComponent
-                     symbol={symbol}
-                     label={'5'}
-                     show={show}
-                     setShow={setShow}
-                     setSymbol={setSymbol}
-                     prod={prod}
-                     setProd={setProd}
-                  />
-               </Grid>
-               <Grid item>
-                  <WindowsCalculatorButtonComponent
-                     symbol={symbol}
-                     label={'6'}
-                     show={show}
-                     setShow={setShow}
-                     setSymbol={setSymbol}
-                     prod={prod}
-                     setProd={setProd}
-                  />
-               </Grid>
-               <Grid item>
-                  <WindowsCalculatorButtonComponent
-                     symbol={symbol}
-                     label={'*'}
-                     show={show}
-                     setShow={setShow}
-                     setSymbol={setSymbol}
-                     prod={prod}
-                     setProd={setProd}
-                  />
-               </Grid>
-               <Grid item>
-                  <WindowsCalculatorButtonComponent
-                     symbol={symbol}
-                     label={'1'}
-                     show={show}
-                     setShow={setShow}
-                     setSymbol={setSymbol}
-                     prod={prod}
-                     setProd={setProd}
-                  />
-               </Grid>
-               <Grid item>
-                  <WindowsCalculatorButtonComponent
-                     symbol={symbol}
-                     label={'2'}
-                     show={show}
-                     setShow={setShow}
-                     setSymbol={setSymbol}
-                     prod={prod}
-                     setProd={setProd}
-                  />
-               </Grid>
-               <Grid item>
-                  <WindowsCalculatorButtonComponent
-                     symbol={symbol}
-                     label={'3'}
-                     show={show}
-                     setShow={setShow}
-                     setSymbol={setSymbol}
-                     prod={prod}
-                     setProd={setProd}
-                  />
-               </Grid>
-               <Grid item>
-                  <WindowsCalculatorButtonComponent
-                     symbol={symbol}
-                     label={'-'}
-                     show={show}
-                     setShow={setShow}
-                     setSymbol={setSymbol}
-                     prod={prod}
-                     setProd={setProd}
-                  />
-               </Grid>
-               <Grid item>
-                  <WindowsCalculatorButtonComponent
-                     symbol={symbol}
-                     label={'.'}
-                     show={show}
-                     setShow={setShow}
-                     setSymbol={setSymbol}
-                     prod={prod}
-                     setProd={setProd}
-                  />
-               </Grid>
-               <Grid item>
-                  <WindowsCalculatorButtonComponent
-                     symbol={symbol}
-                     label={'0'}
-                     show={show}
-                     setShow={setShow}
-                     setSymbol={setSymbol}
-                     prod={prod}
-                     setProd={setProd}
-                  />
-               </Grid>
-               <Grid item>
-                  <WindowsCalculatorButtonComponent
-                     symbol={symbol}
-                     label={'='}
-                     show={show}
-                     setShow={setShow}
-                     isEqual={true}
-                     setSymbol={setSymbol}
-                     prod={prod}
-                     setProd={setProd}
-                     onClick={handleOnClickResult}
-                  />
-               </Grid>
-               <Grid item>
-                  <WindowsCalculatorButtonComponent
-                     symbol={symbol}
-                     label={'+'}
-                     show={show}
-                     setShow={setShow}
-                     setSymbol={setSymbol}
-                     prod={prod}
-                     setProd={setProd}
-                  />
-               </Grid>
+               {[
+                  { label: '', specialProps: {} },
+                  { label: 'C', specialProps: {} },
+                  { label: '%', specialProps: {} },
+                  { label: '<-', specialProps: { isDelete: true } },
+                  { label: '7', specialProps: {} },
+                  { label: '8', specialProps: {} },
+                  { label: '9', specialProps: {} },
+                  { label: '/', specialProps: {} },
+                  { label: '4', specialProps: {} },
+                  { label: '5', specialProps: {} },
+                  { label: '6', specialProps: {} },
+                  { label: '*', specialProps: {} },
+                  { label: '1', specialProps: {} },
+                  { label: '2', specialProps: {} },
+                  { label: '3', specialProps: {} },
+                  { label: '-', specialProps: {} },
+                  { label: '.', specialProps: {} },
+                  { label: '0', specialProps: {} },
+                  { label: '=', specialProps: { isEqual: true } },
+                  { label: '+', specialProps: {} },
+               ].map((button, index) => (
+                  <Grid item key={index}>
+                     <WindowsCalculatorButtonComponent
+                        symbol={symbol}
+                        label={button.label}
+                        show={show}
+                        setShow={(newShow) =>
+                           setCalculatorState({
+                              ...calculatorState,
+                              show: newShow,
+                           })
+                        }
+                        setSymbol={(newSymbol) =>
+                           setCalculatorState({
+                              ...calculatorState,
+                              symbol: newSymbol,
+                           })
+                        }
+                        setProd={(newProd) =>
+                           setCalculatorState({
+                              ...calculatorState,
+                              prod: newProd,
+                           })
+                        }
+                        {...button.specialProps}
+                     />
+                  </Grid>
+               ))}
             </Grid>
          </Box>
       </Box>
