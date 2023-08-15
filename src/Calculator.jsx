@@ -3,13 +3,9 @@ import { useState } from 'react'
 import WindowsCalculatorButtonComponent from './CalculatorButton'
 
 export const Calculator = () => {
-   const [calculatorState, setCalculatorState] = useState({
-      show: '',
-      prod: '',
-      symbol: '',
-   })
-
-   const { show, prod, symbol } = calculatorState
+   const [show, setShow] = useState('')
+   const [prod, setProd] = useState()
+   const [symbol, setSymbol] = useState('')
 
    return (
       <Box
@@ -29,6 +25,7 @@ export const Calculator = () => {
                gutterBottom
                sx={{
                   textAlign: 'right',
+
                   color: 'white',
                   opacity: '0.5',
                }}
@@ -79,24 +76,10 @@ export const Calculator = () => {
                         symbol={symbol}
                         label={button.label}
                         show={show}
-                        setShow={(newShow) =>
-                           setCalculatorState({
-                              ...calculatorState,
-                              show: newShow,
-                           })
-                        }
-                        setSymbol={(newSymbol) =>
-                           setCalculatorState({
-                              ...calculatorState,
-                              symbol: newSymbol,
-                           })
-                        }
-                        setProd={(newProd) =>
-                           setCalculatorState({
-                              ...calculatorState,
-                              prod: newProd,
-                           })
-                        }
+                        setShow={setShow}
+                        setSymbol={setSymbol}
+                        prod={prod}
+                        setProd={setProd}
                         {...button.specialProps}
                      />
                   </Grid>

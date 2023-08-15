@@ -67,7 +67,6 @@ const WindowsCalculatorButtonComponent = ({
          setProd(ans)
          setSymbol('')
       } else if (label === '<-') {
-         console.log(show.slice(0, -1))
          setShow(show.slice(0, -1))
       } else if (operations.includes(label)) {
          setProd(show)
